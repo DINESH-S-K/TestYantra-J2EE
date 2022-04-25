@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+	<bean class="com.tyss.springtesting.Laptop" name="laptop">
+		<property name="id">
+			<value>1</value>
+		</property>
+		<property name="name">
+			<value>Dinesh</value>
+		</property>
+		<property name="battery" ref="battery"></property>
+	</bean>
+	
+	<bean class="com.tyss.springtesting.Battery" name="battery">
+		<property name="name">
+			<value>Dura cell</value>
+		</property>
+	</bean>
+	
+		<bean class="com.tyss.springtesting.Laptop" name="laptop1">
+		<property name="id" value="1"/>
+		<property name="name" value="Dinesh"/>
+		<property name="battery" ref="battery"/>
+	</bean>
+	<bean class="com.tyss.springtesting.Battery" name="battery1">
+		<property name="name" value="Dura cell"/>
+	</bean>
+	
+	<bean class="com.tyss.springtesting.Laptop" name="laptop2">
+		<constructor-arg name="id" value="1"/>
+		<constructor-arg name="name" value="Dinesh"/>
+		<constructor-arg name="battery" ref="battery"/>
+	</bean>
+	<bean class="com.tyss.springtesting.Battery" name="battery2">
+		<constructor-arg name="name" value="Dura cell"/>
+	</bean>
+</beans>
