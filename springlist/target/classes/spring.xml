@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+	<bean class="com.tyss.springlist.Showroom" name="showroom">
+		<property name="id" value="23" />
+		<property name="carList">
+			<list>
+				<ref bean="audi" />
+				<ref bean="bmw" />
+			</list>
+		</property>
+	</bean>
+	<bean class="com.tyss.springlist.Car" name="audi">
+		<property name="name" value="Audi" />
+		<property name="price" value="12345" />
+	</bean>
+	<bean class="com.tyss.springlist.Car" name="bmw">
+		<property name="name" value="BMW" />
+		<property name="price" value="9874" />
+	</bean>
+	<bean class="com.tyss.springlist.Showroom" name="showroom2"
+		autowire="byType">
+		<property name="id" value="23" />
+	</bean>
+
+
+	<bean class="com.tyss.springlist.Employee" name="Dinesh">
+		<property name="id" value="1" />
+		<property name="name" value="Dinesh" />
+		<property name="price" value="12345" />
+	</bean>
+
+	<bean class="com.tyss.springlist.Employee" name="Nallish">
+		<property name="id" value="2" />
+		<property name="name" value="Nallish" />
+		<property name="price" value="12345" />
+	</bean>
+	<bean class="com.tyss.springlist.Company" name="company">
+		<property name="name" value="employees_details" />
+		<property name="employee">
+			<list>
+				<ref bean="Dinesh" />
+				<ref bean="Nallish" />
+			</list>
+		</property>
+	</bean>
+	<bean class="com.tyss.springlist.Company" name="company1"
+		autowire="byType">
+		<property name="name" value="employees_details" />
+	</bean>
+
+	<bean class="com.tyss.springlist.Chats" name="strings">
+		<property name="name" value="List of chats"></property>
+		<property name="chat">
+			<list>
+				<value>Hi How are you?</value>
+				<value>I am fine</value>
+				<value>How about you</value>
+			</list>
+		</property>
+	</bean>
+</beans>

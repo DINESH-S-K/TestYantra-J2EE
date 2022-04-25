@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	version="4.0">
+	<display-name>mailSimulation</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>signUpPage</servlet-name>
+		<jsp-file>/userSignUp.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>signUpPage</servlet-name>
+		<url-pattern>/sign-up</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>registerPage</servlet-name>
+		<servlet-class>com.ms.registration.UserSignUp</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>registerPage</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+
+<servlet>
+		<servlet-name>signInPage</servlet-name>
+		<jsp-file>/userSignIn.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>signInPage</servlet-name>
+		<url-pattern>/sign-In</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ValidatePage</servlet-name>
+		<servlet-class>com.ms.registration.UserSignIn</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>validatePage</servlet-name>
+		<url-pattern>/validate</url-pattern>
+	</servlet-mapping>
+</web-app>

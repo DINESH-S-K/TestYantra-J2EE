@@ -1,0 +1,11 @@
+{
+  "id" : 1,
+  "salary" : 100.0,
+  "add" : {
+    "houseNo" : "34",
+    "streetName" : "kkk",
+    "area" : "Salem",
+    "pincode" : 637504
+  },
+  "fullName" : "Dinesh"
+}

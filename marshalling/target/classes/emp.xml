@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<employee emp_id="1" name="Dinesh">
+    <add>
+        <area>Salem</area>
+        <houseNo>34</houseNo>
+        <pincode>637504</pincode>
+        <streetName>kkk</streetName>
+    </add>
+    <designation>Intern</designation>
+    <Salaryrange>15000.0</Salaryrange>
+</employee>
