@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+
+	<bean class="com.tyss.spring.GirlFriend" name="gf"
+		autowire="byType">
+		<property name="fullName">
+			<value>Sri Devi</value>
+		</property>
+		<property name="phoneNumber">
+			<value>6369073734</value>
+		</property>
+		<property name="instaId">
+			<value>dinesh-s-k</value>
+		</property>
+		<property name="bestQuality">
+			<value>doctor</value>
+		</property>
+	</bean>
+	<bean class="com.tyss.spring.BoyFriend" name="nallish"
+		primary="true">
+		<property name="fullName">
+			<value>Nallish</value>
+		</property>
+		<property name="phoneNumber">
+			<value>6369073734</value>
+		</property>
+		<property name="instaId">
+			<value>sdsdscs</value>
+		</property>
+		<property name="bestQuality">
+			<value>coder</value>
+		</property>
+	</bean>
+	<bean class="com.tyss.spring.BoyFriend" name="dinesh">
+		<constructor-arg value="dinesh" />
+		<constructor-arg value="12353432" />
+		<constructor-arg value="dfdd" />
+		<constructor-arg value="fhgg" />
+	</bean>
+</beans>
